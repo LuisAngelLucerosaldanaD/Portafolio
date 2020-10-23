@@ -1,32 +1,137 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="padding-top">
+      <header class="container">
+        <div class="row">
+          <div
+            class="col-md-12 border-bottom border-left border-right fixed-height"
+          >
+            <div class="row">
+              <div class="col-md-2 col-sm-2">
+                <a href="/" class="logo">
+                  <img
+                    class="img-responsive navbar-brand"
+                    src="./assets/luis.jpg"
+                    alt="profile"
+                  />
+                </a>
+              </div>
+              <nav-lef />
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center padding-top container-responsive">
+            <h1 class="text-norm border-bottom">
+              Frontend and backend developer based in JavaScript, Golang.
+              <br />
+              Highly experienced in developing custom websites and Customer
+              Support.
+            </h1>
+            <h1 class="text-responsive border-bottom">
+              Frontend and backend developer based in JavaScript, Golang.
+              <br />
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <router-view />
+      </div>
+      <div class="container-fluid bg-navy">
+        <Footer />
+      </div>
     </div>
-    <router-view/>
   </div>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+import NavLef from "@/components/NavLeft.vue";
+import Footer from "@/components/Footer.vue";
+@Component({
+  components: {
+    NavLef,
+    Footer,
+  },
+})
+export default class App extends Vue {}
+</script>
 
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  overflow-x: hidden;
 }
 
-#nav {
-  padding: 30px;
+.padding-top {
+  padding-top: 20px;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+.fixed-height {
+  height: 80px;
+}
+.border-right {
+  border-right: 2px solid #f5f6f7;
+}
+.border-left {
+  border-left: 2px solid #f5f6f7;
+}
+.border-bottom {
+  border-bottom: 2px solid #f5f6f7;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
+header {
+  .logo {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    img {
+      max-width: 100px;
+      vertical-align: middle;
+      border: 0;
     }
+  }
+}
+
+a {
+  color: #06bc9b;
+  outline: 0 !important;
+  text-decoration: none;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.h1,
+h1 {
+  font-size: 24px;
+  color: #63707e;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  font-family: Helvetica;
+  margin: 20px 0 0 0;
+  font-weight: 400 !important;
+}
+
+.padding-top {
+  padding-top: 20px;
+}
+
+.hidden-sm {
+  display: block !important;
+}
+
+@media (min-width: 992px) {
+  .col-md-12 {
+    width: 100%;
   }
 }
 </style>

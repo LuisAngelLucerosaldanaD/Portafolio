@@ -1,5 +1,5 @@
 {
-  "name": "first_app",
+  "name": "portafolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/vue-fontawesome": "^2.0.0",
     "core-js": "^3.6.5",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
