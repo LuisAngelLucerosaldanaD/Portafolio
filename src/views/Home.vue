@@ -20,7 +20,7 @@
         </h1>
         <div class="row btn-pull-right">
           <div class="col-md-offset-3 col-md-9 col-sm-offset-4 col-sm-8">
-            <router-link to="/about" class="btn btn-success btn-block"
+            <router-link to="/portafolio" class="btn btn-success btn-block"
               >View Portafolio
               <i class="fa fa-chevron-circle-right fa-align-right"></i
             ></router-link>
